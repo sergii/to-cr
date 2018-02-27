@@ -15,7 +15,7 @@
   <tbody>
     <% @tickets.each do |ticket| %>
       <tr>
-        <td><%= ticket.url %></td>
+        <td><%= link_to ticket.url, ticket.url %></td>
         <td><%= ticket.note %></td>
         <td><%= time_ago_in_words(ticket.created_at) %> ago</td>
         <td><%= link_to 'Show', ticket %></td>
