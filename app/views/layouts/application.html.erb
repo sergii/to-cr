@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ToCr</title>
+    <title>Simple Code Review Viewer</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -17,6 +17,9 @@
       <p class="alert alert-danger"><%= alert %></p>
       <!-- <p class="alert"><%= alert %></p> -->
     <% end %>
+
+    <%= render "layouts/header" %>
     <%= yield %>
+    <%= render "layouts/footer" %>
   </body>
 </html>
