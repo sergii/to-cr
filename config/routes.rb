@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  root 'tickets#index'
+  root "home#index"
   resources :tickets
 end
