@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-url = 'http://to-cr.com/projects/tocr/ticket-'
+url = 'http://to-cr.com/projects/tocr/tickets/'
 NOTES = %w[enhancement task feature bug epic release chore]
 
 100.times { Ticket.create(url: "#{url}-#{SecureRandom.hex}", note: NOTES.sample) }
