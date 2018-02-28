@@ -1,0 +1,17 @@
+{
+  "tests": "codeceptjs/*_test.js",
+  "timeout": 10000,
+  "output": "./output",
+  "helpers": {},
+  "include": {},
+  "bootstrap": false,
+  "mocha": {},
+  "name": "Tests.Acceptance",
+  "helpers": {
+    "Nightmare": {
+      "url": "http://localhost:3000",
+      "show": true,
+      "restart": false
+    }
+  }
+}
