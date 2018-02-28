@@ -6,7 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-ticket_id = SecureRandom.hex[1..6]
 NOTES = %w[enhancement task feature bug epic release chore]
 
-100.times { Ticket.create(url: "http://to-cr.com/tickets/#{ticket_id}", note: NOTES.sample) }
+100.times { Ticket.create(
+  url: "http://to-cr.com/tickets/#{SecureRandom.hex[1..6]}",
+  note: NOTES.sample,
+  created_at: rand(1.month).seconds.ago)
+}
