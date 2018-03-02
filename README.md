@@ -18,7 +18,6 @@ postgresql 10.1
 ### Database initialization
 
     rails db:migrate
-
     rails db:seed
 
 ### How to run the test suite
