@@ -11,8 +11,6 @@ rails 5.1.5
 
 postgresql 10.1
 
-* Configuration
-
 ### Database creation
 
     rails db:create
@@ -44,5 +42,3 @@ To run CodeceptJS tests wich based on node.js please type:
 ### Services (job queues, cache servers, search engines, etc.)
 
 ### Deployment instructions
-
-* ...
