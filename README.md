@@ -3,25 +3,41 @@
 
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### System dependencies
 
-Things you may want to cover:
+ruby-2.5.0
 
-* Ruby version
+rails 5.1.5
 
-* System dependencies
+postgresql 10.1
 
-* Configuration
+### Database creation
 
-* Database creation
+    rails db:create
 
-* Database initialization
+### Database initialization
 
-* How to run the test suite
+    rails db:migrate
+    rails db:seed
 
-* Services (job queues, cache servers, search engines, etc.)
+### How to run the test suite
 
-* Deployment instructions
+For writing Acceptence tests in this project we are using 3 different approaches and fremworks:
 
-* ...
+Minitest+Capybara, RSpec+Capybara, CodeceptJS framework.
+
+To run rails system tests with MiniTest and Capybara please type:
+
+    rails test:system
+
+To run rails system tests with RSpec and Capybara please type:
+
+    rspec -cfd
+    
+To run CodeceptJS tests wich based on node.js please type:
+
+    codeceptjs run
+
+### Services (job queues, cache servers, search engines, etc.)
+
+### Deployment instructions
