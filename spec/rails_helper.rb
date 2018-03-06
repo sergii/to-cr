@@ -56,7 +56,7 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
 
   config.before(:each, type: :system) do
-    driven_by :rack_test
+    driven_by ENV.fetch('DRIVEN_BY', :rack_test).to_sym
   end
 
   config.before(:each, type: :system, js: true) do
