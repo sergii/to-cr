@@ -41,8 +41,14 @@ GEM
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
     arel (8.0.0)
+    authtrail (0.1.0)
+      geocoder
+      rails (>= 5)
+      warden
+    awesome_print (1.8.0)
     bcrypt (3.1.11)
     bindex (0.5.0)
+    browser (2.5.3)
     builder (3.2.3)
     byebug (10.0.0)
     capybara (2.18.0)
@@ -75,6 +81,7 @@ GEM
     faraday (0.12.2)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.23)
+    geocoder (1.4.9)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     hashie (3.5.7)
@@ -229,6 +236,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  authtrail
+  awesome_print
+  browser
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
@@ -254,4 +264,4 @@ RUBY VERSION
    ruby 2.5.0p0
 
 BUNDLED WITH
-   1.16.1
+   1.16.2

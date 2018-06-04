@@ -1,0 +1,427 @@
+<style>
+  table tbody td {
+    vertical-align: top;
+    padding: 0
+  }
+</style>
+
+<h1>User Sessions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Scope</th>
+      <th>Strategy</th>
+      <th>Success</th>
+      <th>Failure reason</th>
+      <th>User type</th>
+      <th>Context</th>
+      <th>IP</th>
+      <th>User agent</th>
+      <th>Referrer</th>
+      <th>City</th>
+      <th>Region</th>
+      <th>Country</th>
+      <th>Login</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sessions.each do |session| %>
+      <tr>
+        <td><%= session.id %></td>
+        <td><%= session.scope %></td>
+        <td><%= session.strategy %></td>
+        <td><%= session.success %></td>
+        <td><%= session.failure_reason %></td>
+        <td><%= session.user_type %></td>
+        <td><%= session.context %></td>
+        <td><%= session.ip  %></td>
+        <td>
+          <%= session.user_agent %>
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <h3>
+                    Browser Info
+                  </h3>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>bot? </strong></td>
+                <td><%= browser(session.user_agent).bot? %></td>
+              </tr>
+              <tr>
+                <td><strong>chrome? </strong></td>
+                <td><%= browser(session.user_agent).chrome? %></td>
+              </tr>
+              <tr>
+                <td><strong>core_media? </strong></td>
+                <td><%= browser(session.user_agent).core_media? %></td>
+              </tr>
+              <tr>
+                <td><strong>edge? </strong></td>
+                <td><%= browser(session.user_agent).edge? %></td>
+              </tr>
+              <tr>
+                <td><strong>electron? </strong></td>
+                <td><%= browser(session.user_agent).electron? %></td>
+              </tr>
+              <tr>
+                <td><strong>firefox? </strong></td>
+                <td><%= browser(session.user_agent).firefox? %></td>
+              </tr>
+              <tr>
+                <td><strong>full_version? </strong></td>
+                <td><%= browser(session.user_agent).full_version %></td>
+              </tr>
+              <tr>
+                <td><strong>ie? </strong></td>
+                <td><%= browser(session.user_agent).ie? %></td>
+              </tr>
+              <tr>
+                <td><strong>ie(6)? </strong></td>
+              </tr>
+              <tr>
+                <td><strong>special version? </strong></td>
+                <td><%= browser(session.user_agent).bot? %></td>
+              </tr>
+              <tr>
+                <td><strong>known? </strong></td>
+                <td><%= browser(session.user_agent).known? %></td>
+              </tr>
+              <tr>
+                <td><strong>meta </strong></td>
+                <td><%= browser(session.user_agent).meta %></td>
+              </tr>
+              <tr>
+                <td><strong>modern? </strong></td>
+                <td><%= browser(session.user_agent).modern? %></td>
+              </tr>
+              <tr>
+                <td><strong>name </strong></td>
+                <td><%= browser(session.user_agent).name %></td>
+              </tr>
+              <tr>
+                <td><strong>nokia? </strong></td>
+                <td><%= browser(session.user_agent).nokia? %></td>
+              </tr>
+              <tr>
+                <td><strong>opera? </strong></td>
+                <td><%= browser(session.user_agent).opera? %></td>
+              </tr>
+              <tr>
+                <td><strong>opera_mini? </strong></td>
+                <td><%= browser(session.user_agent).opera_mini? %></td>
+              </tr>
+              <tr>
+                <td><strong>phantom_js? </strong></td>
+                <td><%= browser(session.user_agent).phantom_js? %></td>
+              </tr>
+              <tr>
+                <td><strong>quicktime? </strong></td>
+                <td><%= browser(session.user_agent).quicktime? %></td>
+              </tr>
+              <tr>
+                <td><strong>safari? </strong></td>
+                <td><%= browser(session.user_agent).safari? %></td>
+              </tr>
+              <tr>
+                <td><strong>safari_webapp_mode? </strong></td>
+                <td><%= browser(session.user_agent).safari_webapp_mode? %></td>
+              </tr>
+              <tr>
+                <td><strong>to_s </strong></td>
+                <td><%= browser(session.user_agent).to_s %></td>
+              </tr>
+              <tr>
+                <td><strong>uc_browser? </strong></td>
+                <td><%= browser(session.user_agent).uc_browser? %></td>
+              </tr>
+              <tr>
+                <td><strong>version </strong></td>
+                <td><%= browser(session.user_agent).version %></td>
+              </tr>
+              <tr>
+                <td><strong>webkit? </strong></td>
+                <td><%= browser(session.user_agent).webkit? %></td>
+              </tr>
+              <tr>
+                <td><strong>webkit_full_version </strong></td>
+                <td><%= browser(session.user_agent).webkit_full_version %></td>
+              </tr>
+              <tr>
+                <td><strong>yandex? </strong></td>
+                <td><%= browser(session.user_agent).yandex? %></td>
+              </tr>
+              <tr>
+                <td><strong>wechat? </strong></td>
+                <td><%= browser(session.user_agent).wechat? %></td>
+              </tr>
+              <tr>
+                <td><strong>weibo? </strong></td>
+                <td><%= browser(session.user_agent).weibo? %></td>
+              </tr>
+              <tr>
+                <td>
+                  <h3>
+                    Bot Info
+                  </h3>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>bot? </strong></td>
+                <td><%= browser(session.user_agent).bot? %></td>
+              </tr>
+              <tr>
+                <td><strong>bot.name </strong></td>
+                <td><%= browser(session.user_agent).bot.name %></td>
+              </tr>
+              <tr>
+                <td><strong>bot.search_engine? </strong></td>
+                <td><%= browser(session.user_agent).bot.search_engine? %></td>
+              </tr>
+              <tr>
+                <td><strong>DEVICE INFO</strong></td>
+              </tr>
+              <tr>
+                <td><strong>device </strong></td>
+                <td><%= browser(session.user_agent).device %></td>
+              </tr>
+              <tr>
+                <td><strong>device.id </strong></td>
+                <td><%= browser(session.user_agent).device.id %></td>
+              </tr>
+              <tr>
+                <td><strong>device.name </strong></td>
+                <td><%= browser(session.user_agent).device.name %></td>
+              </tr>
+              <tr>
+                <td><strong>device.blackberry_playbook? </strong></td>
+                <td><%= browser(session.user_agent).device.blackberry_playbook? %></td>
+              </tr>
+              <tr>
+                <td><strong>device.console? </strong></td>
+                <td><%= browser(session.user_agent).device.console? %></td>
+              </tr>
+              <tr>
+                <td><strong>device.ipad? </strong></td>
+                <td><%= browser(session.user_agent).device.ipad? %></td>
+              </tr>
+              <tr>
+                <td><strong>device.iphone? </strong></td>
+                <td><%= browser(session.user_agent).device.iphone? %></td>
+              </tr>
+              <tr>
+                <td><strong>device.ipod_touch? </strong></td>
+                <td><%= browser(session.user_agent).device.ipod_touch? %></td>
+              </tr>
+              <tr>
+                <td><strong>device.kindle? </strong></td>
+                <td><%= browser(session.user_agent).device.kindle? %></td>
+              </tr>
+              <tr>
+                <td><strong>device.kindle? </strong></td>
+                <td><%= browser(session.user_agent).device.kindle? %></td>
+              </tr>
+              <tr>
+                <td><strong>device.kindle_fire? </strong></td>
+                <td><%= browser(session.user_agent).device.kindle_fire? %></td>
+              </tr>
+              <tr>
+                <td><strong>device.mobile? </strong></td>
+                <td><%= browser(session.user_agent).device.mobile? %></td>
+              </tr>
+              <tr>
+                <td><strong>device.nintendo? </strong></td>
+                <td><%= browser(session.user_agent).device.nintendo? %></td>
+              </tr>
+              <tr>
+                <td><strong>device.playstation? </strong></td>
+                <td><%= browser(session.user_agent).device.playstation? %></td>
+              </tr>
+              <tr>
+                <td><strong>device.ps3? </strong></td>
+                <td><%= browser(session.user_agent).device.ps3? %></td>
+              </tr>
+              <tr>
+                <td><strong>device.ps4? </strong></td>
+                <td><%= browser(session.user_agent).device.ps4? %></td>
+              </tr>
+              <tr>
+                <td><strong>device.psp? </strong></td>
+                <td><%= browser(session.user_agent).device.psp? %></td>
+              </tr>
+              <tr>
+                <td><strong>device.silk? </strong></td>
+                <td><%= browser(session.user_agent).device.silk? %></td>
+              </tr>
+              <tr>
+                <td><strong>device.surface? </strong></td>
+                <td><%= browser(session.user_agent).device.surface? %></td>
+              </tr>
+              <tr>
+                <td><strong>device.tablet? </strong></td>
+                <td><%= browser(session.user_agent).device.tablet? %></td>
+              </tr>
+              <tr>
+                <td><strong>device.tv? </strong></td>
+                <td><%= browser(session.user_agent).device.tv? %></td>
+              </tr>
+              <tr>
+                <td><strong>device.vita? </strong></td>
+                <td><%= browser(session.user_agent).device.vita? %></td>
+              </tr>
+              <tr>
+                <td><strong>device.wiiu? </strong></td>
+                <td><%= browser(session.user_agent).device.wiiu? %></td>
+              </tr>
+              <tr>
+                <td><strong>device.xbox? </strong></td>
+                <td><%= browser(session.user_agent).device.xbox? %></td>
+              </tr>
+              <tr>
+                <td><strong>device.xbox_360? </strong></td>
+                <td><%= browser(session.user_agent).device.xbox_360? %></td>
+              </tr>
+              <tr>
+                <td><strong>device.xbox_one? </strong></td>
+                <td><%= browser(session.user_agent).device.xbox_one? %></td>
+              </tr>
+              <tr>
+                <td>
+                  <h3>
+                    Platform Info
+                  </h3>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>platform </strong></td>
+                <td><%= browser(session.user_agent).device %></td>
+              </tr>
+              <tr>
+                <td><strong>platform.id </strong></td>
+                <td><%= browser(session.user_agent).platform.id %></td>
+              </tr>
+              <tr>
+                <td><strong>platform.name </strong></td>
+                <td><%= browser(session.user_agent).platform.name %></td>
+              </tr>
+              <tr>
+                <td><strong>platform.version </strong></td>
+                <td><%= browser(session.user_agent).platform.version %></td>
+              </tr>
+              <tr>
+                <td><strong>platform.adobe_air? </strong></td>
+                <td><%= browser(session.user_agent).platform.adobe_air? %></td>
+              </tr>
+              <tr>
+                <td><strong>platform.android? </strong></td>
+                <td><%= browser(session.user_agent).platform.android? %></td>
+              </tr>
+              <tr>
+                <td><strong>platform.android_app? </strong></td>
+                <td><%= browser(session.user_agent).platform.android_app? %></td>
+              </tr>
+              <tr>
+                <td><strong>platform.android_webview? </strong></td>
+                <td><%= browser(session.user_agent).platform.android_webview? %></td>
+              </tr>
+              <tr>
+                <td><strong>platform.blackberry? </strong></td>
+                <td><%= browser(session.user_agent).platform.blackberry? %></td>
+              </tr>
+              <tr>
+                <td><strong>platform.chrome_os? </strong></td>
+                <td><%= browser(session.user_agent).platform.chrome_os? %></td>
+              </tr>
+              <tr>
+                <td><strong>platform.firefox_os? </strong></td>
+                <td><%= browser(session.user_agent).platform.firefox_os? %></td>
+              </tr>
+              <tr>
+                <td><strong>platform.ios? </strong></td>
+                <td><%= browser(session.user_agent).platform.ios? %></td>
+              </tr>
+              <tr>
+                <td><strong>platform.ios_app? </strong></td>
+                <td><%= browser(session.user_agent).platform.ios_app? %></td>
+              </tr>
+              <tr>
+                <td><strong>platform.ios_webview? </strong></td>
+                <td><%= browser(session.user_agent).platform.ios_webview? %></td>
+              </tr>
+              <tr>
+                <td><strong>platform.linux? </strong></td>
+                <td><%= browser(session.user_agent).platform.linux? %></td>
+              </tr>
+              <tr>
+                <td><strong>platform.mac? </strong></td>
+                <td><%= browser(session.user_agent).platform.mac? %></td>
+              </tr>
+              <tr>
+                <td><strong>platform.other? </strong></td>
+                <td><%= browser(session.user_agent).platform.other? %></td>
+              </tr>
+              <tr>
+                <td><strong>platform.windows10? </strong></td>
+                <td><%= browser(session.user_agent).platform.windows10? %></td>
+              </tr>
+              <tr>
+                <td><strong>platform.windows7? </strong></td>
+                <td><%= browser(session.user_agent).platform.windows7? %></td>
+              </tr>
+              <tr>
+                <td><strong>platform.windows8? </strong></td>
+                <td><%= browser(session.user_agent).platform.windows8? %></td>
+              </tr>
+              <tr>
+                <td><strong>platform.windows? </strong></td>
+                <td><%= browser(session.user_agent).platform.windows? %></td>
+              </tr>
+              <tr>
+                <td><strong>platform.windows_mobile? </strong></td>
+                <td><%= browser(session.user_agent).platform.windows_mobile? %></td>
+              </tr>
+              <tr>
+                <td><strong>platform.windows_phone? </strong></td>
+                <td><%= browser(session.user_agent).platform.windows_phone? %></td>
+              </tr>
+              <tr>
+                <td><strong>platform.windows_rt? </strong></td>
+                <td><%= browser(session.user_agent).platform.windows_rt? %></td>
+              </tr>
+              <tr>
+                <td><strong>platform.windows_touchscreen_desktop? </strong></td>
+                <td><%= browser(session.user_agent).platform.windows_touchscreen_desktop? %></td>
+              </tr>
+              <tr>
+                <td><strong>platform.windows_wow64? </strong></td>
+                <td><%= browser(session.user_agent).platform.windows_wow64? %></td>
+              </tr>
+              <tr>
+                <td><strong>platform.windows_x64? </strong></td>
+                <td><%= browser(session.user_agent).platform.windows_x64? %></td>
+              </tr>
+              <tr>
+                <td><strong>platform.windows_x64_inclusive? </strong></td>
+                <td><%= browser(session.user_agent).platform.windows_x64_inclusive? %></td>
+              </tr>
+              <tr>
+                <td><strong>platform.windows_xp? </strong></td>
+                <td><%= browser(session.user_agent).platform.windows_xp? %></td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+        <td><%= session.referrer %></td>
+        <td><%= session.city %></td>
+        <td><%= session.region %></td>
+        <td><%= session.country %></td>
+        <td><%= time_ago_in_words(session.created_at) %> ago</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
