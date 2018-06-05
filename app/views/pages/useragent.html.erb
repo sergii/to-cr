@@ -1,0 +1,29 @@
+<style>
+  table tbody td {
+    vertical-align: top;
+    padding: 0
+  }
+</style>
+
+<table>
+  <tbody>
+    <tr>
+      <td>
+        <h3>
+          User Agent Info
+        </h3>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>user_agent.browser </strong></td>
+      <td><%= @user_agent.browser %></td>
+    </tr>
+    <tr>
+      <td><strong>user_agent.version </strong></td>
+      <td><%= @user_agent.version %></td>
+    </tr>
+    <tr>
+      <td><strong>user_agent.platform </strong></td>
+      <td><%= @user_agent.platform %></td>
+    </tr>
+  </tbody>

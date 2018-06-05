@@ -1,0 +1,57 @@
+<style>
+  table tbody td {
+    vertical-align: top;
+    padding: 0
+  }
+</style>
+
+<table>
+  <tbody>
+    <tr>
+      <td>
+        <h3>
+          User Agent Parser Info
+        </h3>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>user_agent_parser.to_s </strong></td>
+      <td><%= @user_agent_parser.to_s %></td>
+    </tr>
+    <tr>
+      <td><strong>user_agent_parser.family </strong></td>
+      <td><%= @user_agent_parser.family %></td>
+    </tr>
+    <tr>
+      <td><strong>user_agent_parser.version.to_s </strong></td>
+      <td><%= @user_agent_parser.version.to_s %></td>
+    </tr>
+    <tr>
+      <td><strong>user_agent_parser.version.major </strong></td>
+      <td><%= @user_agent_parser.version.major %></td>
+    </tr>
+    <tr>
+      <td><strong>user_agent_parser.version.minor </strong></td>
+      <td><%= @user_agent_parser.version.minor %></td>
+    </tr>
+    <tr>
+      <td><strong>user_agent_parser.os </strong></td>
+      <td><%= @user_agent_parser.os %></td>
+    </tr>
+    <tr>
+      <td><strong>user_agent_parser.os.to_s </strong></td>
+      <td><%= @user_agent_parser.os.to_s %></td>
+    </tr>
+    <tr>
+      <td><strong>user_agent_parser.device.family </strong></td>
+      <td><%= @user_agent_parser.device.family %></td>
+    </tr>
+    <tr>
+      <td><strong>user_agent_parser.device.brand </strong></td>
+      <td><%= @user_agent_parser.device.brand %></td>
+    </tr>
+    <tr>
+      <td><strong>user_agent_parser.device.model </strong></td>
+      <td><%= @user_agent_parser.device.model %></td>
+    </tr>
+  </tbody>

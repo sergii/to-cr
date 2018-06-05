@@ -1,3 +1,8 @@
+<%= link_to 'browser', browser_path %> |
+<%= link_to 'device_detector', device_detector_path %> |
+<%= link_to 'user_agent_parser', user_agent_parser_path %> |
+<%= link_to 'useragent', useragent_path %>
+
 <p class="navbar-text pull-right">
 <% if user_signed_in? %>
   Logged in as <strong><%= current_user.email %></strong>.
@@ -5,13 +10,9 @@
   <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
   <br>
   <%= link_to 'Sessions', sessions_path %>
-  <br>
-  <%= link_to 'Browser info', browser_path %>
 <% else %>
   <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
   <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %> |
   <%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path %>
-  <br>
-  <%= link_to 'Browser info', browser_path %>
 <% end %>
 </p>

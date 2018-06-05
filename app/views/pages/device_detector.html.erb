@@ -1,0 +1,45 @@
+<style>
+  table tbody td {
+    vertical-align: top;
+    padding: 0
+  }
+</style>
+
+<table>
+  <tbody>
+    <tr>
+      <td>
+        <h3>
+          Device Info
+        </h3>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>client.name </strong></td>
+      <td><%= @client.name %></td>
+    </tr>
+    <tr>
+      <td><strong>client.full_version </strong></td>
+      <td><%= @client.full_version %></td>
+    </tr>
+    <tr>
+      <td><strong>client.os_name </strong></td>
+      <td><%= @client.os_name %></td>
+    </tr>
+    <tr>
+      <td><strong>client.os_full_version </strong></td>
+      <td><%= @client.os_full_version %></td>
+    </tr>
+    <tr>
+      <td><strong>client.device_name </strong></td>
+      <td><%= @client.device_name %></td>
+    </tr>
+    <tr>
+      <td><strong>client.device_type </strong></td>
+      <td><%= @client.device_type %></td>
+    </tr>
+    <tr>
+      <td><strong>client.known? </strong></td>
+      <td><%= @client.known? %></td>
+    </tr>
+  </tbody>
