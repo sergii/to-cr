@@ -41,6 +41,7 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   gem 'rspec-rails', '~> 3.7'
+  gem 'pry-byebug'
 end
 
 group :development do
@@ -61,3 +62,4 @@ gem 'rack-cors', '~> 1.0.2', require: 'rack/cors'
 gem 'authtrail'
 gem 'awesome_print'
 gem 'browser'
+gem 'shog'

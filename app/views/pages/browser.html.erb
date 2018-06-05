@@ -1,0 +1,424 @@
+<style>
+  table tbody td {
+    vertical-align: top;
+    padding: 0
+  }
+</style>
+
+<table>
+  <tbody>
+    <tr>
+      <td>
+        <h3>
+          Browser Info
+        </h3>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>bot? </strong></td>
+      <td><%= @browser.bot? %></td>
+    </tr>
+    <tr>
+      <td><strong>chrome? </strong></td>
+      <td><%= @browser.chrome? %></td>
+    </tr>
+    <tr>
+      <td><strong>core_media? </strong></td>
+      <td><%= @browser.core_media? %></td>
+    </tr>
+    <tr>
+      <td><strong>edge? </strong></td>
+      <td><%= @browser.edge? %></td>
+    </tr>
+    <tr>
+      <td><strong>electron? </strong></td>
+      <td><%= @browser.electron? %></td>
+    </tr>
+    <tr>
+      <td><strong>firefox? </strong></td>
+      <td><%= @browser.firefox? %></td>
+    </tr>
+    <tr>
+      <td><strong>full_version? </strong></td>
+      <td><%= @browser.full_version %></td>
+    </tr>
+    <tr>
+      <td><strong>ie? </strong></td>
+      <td><%= @browser.ie? %></td>
+    </tr>
+    <tr>
+      <td><strong>special version? </strong></td>
+      <td><%= @browser.bot? %></td>
+    </tr>
+    <tr>
+      <td><strong>known? </strong></td>
+      <td><%= @browser.known? %></td>
+    </tr>
+    <tr>
+      <td><strong>meta </strong></td>
+      <td><%= @browser.meta %></td>
+    </tr>
+    <tr>
+      <td><strong>modern? </strong></td>
+      <td><%= @browser.modern? %></td>
+    </tr>
+    <tr>
+      <td><strong>name </strong></td>
+      <td><%= @browser.name %></td>
+    </tr>
+    <tr>
+      <td><strong>nokia? </strong></td>
+      <td><%= @browser.nokia? %></td>
+    </tr>
+    <tr>
+      <td><strong>opera? </strong></td>
+      <td><%= @browser.opera? %></td>
+    </tr>
+    <tr>
+      <td><strong>opera_mini? </strong></td>
+      <td><%= @browser.opera_mini? %></td>
+    </tr>
+    <tr>
+      <td><strong>phantom_js? </strong></td>
+      <td><%= @browser.phantom_js? %></td>
+    </tr>
+    <tr>
+      <td><strong>quicktime? </strong></td>
+      <td><%= @browser.quicktime? %></td>
+    </tr>
+    <tr>
+      <td><strong>safari? </strong></td>
+      <td><%= @browser.safari? %></td>
+    </tr>
+    <tr>
+      <td><strong>safari_webapp_mode? </strong></td>
+      <td><%= @browser.safari_webapp_mode? %></td>
+    </tr>
+    <tr>
+      <td><strong>to_s </strong></td>
+      <td><%= @browser.to_s %></td>
+    </tr>
+    <tr>
+      <td><strong>uc_browser? </strong></td>
+      <td><%= @browser.uc_browser? %></td>
+    </tr>
+    <tr>
+      <td><strong>version </strong></td>
+      <td><%= @browser.version %></td>
+    </tr>
+    <tr>
+      <td><strong>webkit? </strong></td>
+      <td><%= @browser.webkit? %></td>
+    </tr>
+    <tr>
+      <td><strong>webkit_full_version </strong></td>
+      <td><%= @browser.webkit_full_version %></td>
+    </tr>
+    <tr>
+      <td><strong>yandex? </strong></td>
+      <td><%= @browser.yandex? %></td>
+    </tr>
+    <tr>
+      <td><strong>wechat? </strong></td>
+      <td><%= @browser.wechat? %></td>
+    </tr>
+    <tr>
+      <td><strong>weibo? </strong></td>
+      <td><%= @browser.weibo? %></td>
+    </tr>
+    <tr>
+      <td>
+        <h3>
+          Bot Info
+        </h3>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>bot? </strong></td>
+      <td><%= @browser.bot? %></td>
+    </tr>
+    <tr>
+      <td><strong>bot.name </strong></td>
+      <td><%= @browser.bot.name %></td>
+    </tr>
+    <tr>
+      <td><strong>bot.search_engine? </strong></td>
+      <td><%= @browser.bot.search_engine? %></td>
+    </tr>
+    <tr>
+      <td><strong>DEVICE INFO</strong></td>
+    </tr>
+    <tr>
+      <td><strong>device </strong></td>
+      <td><%= @browser.device %></td>
+    </tr>
+    <tr>
+      <td><strong>device.id </strong></td>
+      <td><%= @browser.device.id %></td>
+    </tr>
+    <tr>
+      <td><strong>device.name </strong></td>
+      <td><%= @browser.device.name %></td>
+    </tr>
+    <tr>
+      <td><strong>device.blackberry_playbook? </strong></td>
+      <td><%= @browser.device.blackberry_playbook? %></td>
+    </tr>
+    <tr>
+      <td><strong>device.console? </strong></td>
+      <td><%= @browser.device.console? %></td>
+    </tr>
+    <tr>
+      <td><strong>device.ipad? </strong></td>
+      <td><%= @browser.device.ipad? %></td>
+    </tr>
+    <tr>
+      <td><strong>device.iphone? </strong></td>
+      <td><%= @browser.device.iphone? %></td>
+    </tr>
+    <tr>
+      <td><strong>device.ipod_touch? </strong></td>
+      <td><%= @browser.device.ipod_touch? %></td>
+    </tr>
+    <tr>
+      <td><strong>device.kindle? </strong></td>
+      <td><%= @browser.device.kindle? %></td>
+    </tr>
+    <tr>
+      <td><strong>device.kindle? </strong></td>
+      <td><%= @browser.device.kindle? %></td>
+    </tr>
+    <tr>
+      <td><strong>device.kindle_fire? </strong></td>
+      <td><%= @browser.device.kindle_fire? %></td>
+    </tr>
+    <tr>
+      <td><strong>device.mobile? </strong></td>
+      <td><%= @browser.device.mobile? %></td>
+    </tr>
+    <tr>
+      <td><strong>device.nintendo? </strong></td>
+      <td><%= @browser.device.nintendo? %></td>
+    </tr>
+    <tr>
+      <td><strong>device.playstation? </strong></td>
+      <td><%= @browser.device.playstation? %></td>
+    </tr>
+    <tr>
+      <td><strong>device.ps3? </strong></td>
+      <td><%= @browser.device.ps3? %></td>
+    </tr>
+    <tr>
+      <td><strong>device.ps4? </strong></td>
+      <td><%= @browser.device.ps4? %></td>
+    </tr>
+    <tr>
+      <td><strong>device.psp? </strong></td>
+      <td><%= @browser.device.psp? %></td>
+    </tr>
+    <tr>
+      <td><strong>device.silk? </strong></td>
+      <td><%= @browser.device.silk? %></td>
+    </tr>
+    <tr>
+      <td><strong>device.surface? </strong></td>
+      <td><%= @browser.device.surface? %></td>
+    </tr>
+    <tr>
+      <td><strong>device.tablet? </strong></td>
+      <td><%= @browser.device.tablet? %></td>
+    </tr>
+    <tr>
+      <td><strong>device.tv? </strong></td>
+      <td><%= @browser.device.tv? %></td>
+    </tr>
+    <tr>
+      <td><strong>device.vita? </strong></td>
+      <td><%= @browser.device.vita? %></td>
+    </tr>
+    <tr>
+      <td><strong>device.wiiu? </strong></td>
+      <td><%= @browser.device.wiiu? %></td>
+    </tr>
+    <tr>
+      <td><strong>device.xbox? </strong></td>
+      <td><%= @browser.device.xbox? %></td>
+    </tr>
+    <tr>
+      <td><strong>device.xbox_360? </strong></td>
+      <td><%= @browser.device.xbox_360? %></td>
+    </tr>
+    <tr>
+      <td><strong>device.xbox_one? </strong></td>
+      <td><%= @browser.device.xbox_one? %></td>
+    </tr>
+    <tr>
+      <td>
+        <h3>
+          Platform Info
+        </h3>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>platform </strong></td>
+      <td><%= @browser.device %></td>
+    </tr>
+    <tr>
+      <td><strong>platform.id </strong></td>
+      <td><%= @browser.platform.id %></td>
+    </tr>
+    <tr>
+      <td><strong>platform.name </strong></td>
+      <td><%= @browser.platform.name %></td>
+    </tr>
+    <tr>
+      <td><strong>platform.version </strong></td>
+      <td><%= @browser.platform.version %></td>
+    </tr>
+    <tr>
+      <td><strong>platform.adobe_air? </strong></td>
+      <td><%= @browser.platform.adobe_air? %></td>
+    </tr>
+    <tr>
+      <td><strong>platform.android? </strong></td>
+      <td><%= @browser.platform.android? %></td>
+    </tr>
+    <tr>
+      <td><strong>platform.android_app? </strong></td>
+      <td><%= @browser.platform.android_app? %></td>
+    </tr>
+    <tr>
+      <td><strong>platform.android_webview? </strong></td>
+      <td><%= @browser.platform.android_webview? %></td>
+    </tr>
+    <tr>
+      <td><strong>platform.blackberry? </strong></td>
+      <td><%= @browser.platform.blackberry? %></td>
+    </tr>
+    <tr>
+      <td><strong>platform.chrome_os? </strong></td>
+      <td><%= @browser.platform.chrome_os? %></td>
+    </tr>
+    <tr>
+      <td><strong>platform.firefox_os? </strong></td>
+      <td><%= @browser.platform.firefox_os? %></td>
+    </tr>
+    <tr>
+      <td><strong>platform.ios? </strong></td>
+      <td><%= @browser.platform.ios? %></td>
+    </tr>
+    <tr>
+      <td><strong>platform.ios_app? </strong></td>
+      <td><%= @browser.platform.ios_app? %></td>
+    </tr>
+    <tr>
+      <td><strong>platform.ios_webview? </strong></td>
+      <td><%= @browser.platform.ios_webview? %></td>
+    </tr>
+    <tr>
+      <td><strong>platform.linux? </strong></td>
+      <td><%= @browser.platform.linux? %></td>
+    </tr>
+    <tr>
+      <td><strong>platform.mac? </strong></td>
+      <td><%= @browser.platform.mac? %></td>
+    </tr>
+    <tr>
+      <td><strong>platform.other? </strong></td>
+      <td><%= @browser.platform.other? %></td>
+    </tr>
+    <tr>
+      <td><strong>platform.windows10? </strong></td>
+      <td><%= @browser.platform.windows10? %></td>
+    </tr>
+    <tr>
+      <td><strong>platform.windows7? </strong></td>
+      <td><%= @browser.platform.windows7? %></td>
+    </tr>
+    <tr>
+      <td><strong>platform.windows8? </strong></td>
+      <td><%= @browser.platform.windows8? %></td>
+    </tr>
+    <tr>
+      <td><strong>platform.windows? </strong></td>
+      <td><%= @browser.platform.windows? %></td>
+    </tr>
+    <tr>
+      <td><strong>platform.windows_mobile? </strong></td>
+      <td><%= @browser.platform.windows_mobile? %></td>
+    </tr>
+    <tr>
+      <td><strong>platform.windows_phone? </strong></td>
+      <td><%= @browser.platform.windows_phone? %></td>
+    </tr>
+    <tr>
+      <td><strong>platform.windows_rt? </strong></td>
+      <td><%= @browser.platform.windows_rt? %></td>
+    </tr>
+    <tr>
+      <td><strong>platform.windows_touchscreen_desktop? </strong></td>
+      <td><%= @browser.platform.windows_touchscreen_desktop? %></td>
+    </tr>
+    <tr>
+      <td><strong>platform.windows_wow64? </strong></td>
+      <td><%= @browser.platform.windows_wow64? %></td>
+    </tr>
+    <tr>
+      <td><strong>platform.windows_x64? </strong></td>
+      <td><%= @browser.platform.windows_x64? %></td>
+    </tr>
+    <tr>
+      <td><strong>platform.windows_x64_inclusive? </strong></td>
+      <td><%= @browser.platform.windows_x64_inclusive? %></td>
+    </tr>
+    <tr>
+      <td><strong>platform.windows_xp? </strong></td>
+      <td><%= @browser.platform.windows_xp? %></td>
+    </tr>
+    <tr>
+      <td>
+        <h3>
+          Aliases
+        </h3>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>mobile? </strong></td>
+      <td><%= @browser.mobile? %></td>
+    </tr>
+    <tr>
+      <td><strong>tablet? </strong></td>
+      <td><%= @browser.tablet? %></td>
+    </tr>
+    <tr>
+      <td>
+        <h3>
+          Accept languages
+        </h3>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>accept_language.first </strong></td>
+      <td><%= @browser.accept_language.first %></td>
+    </tr>
+    <tr>
+      <td><strong>accept_language.first.code </strong></td>
+      <td><%= @browser.accept_language.first.code %></td>
+    </tr>
+    <tr>
+      <td><strong>accept_language.first.region </strong></td>
+      <td><%= @browser.accept_language.first.region %></td>
+    </tr>
+    <tr>
+      <td><strong>accept_language.first.full </strong></td>
+      <td><%= @browser.accept_language.first.full %></td>
+    </tr>
+    <tr>
+      <td><strong>accept_language.first.quality </strong></td>
+      <td><%= @browser.accept_language.first.quality %></td>
+    </tr>
+    <tr>
+      <td><strong>accept_language.first.name </strong></td>
+      <td><%= @browser.accept_language.first.name %></td>
+    </tr>
+  </tbody>
