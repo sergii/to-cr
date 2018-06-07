@@ -1,6 +1,6 @@
 GIT
-  remote: git@github.com:sergii/authtrail.git
-  revision: 86238373e3e2be1e3de69d902ca88cdc44414a83
+  remote: https://github.com/sergii/authtrail.git
+  revision: cf58f8cb80dc3a64637bff6e2cf189a08501d28e
   specs:
     authtrail (0.1.0)
       geocoder
