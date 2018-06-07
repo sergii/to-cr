@@ -19,7 +19,7 @@
       <th>User type</th>
       <th>Context</th>
       <th>IP</th>
-      <th>User agent</th>
+      <th>Client</th>
       <th>Referrer</th>
       <th>City</th>
       <th>Region</th>
@@ -40,7 +40,7 @@
         <td><%= session.user_type %></td>
         <td><%= session.context %></td>
         <td><%= session.ip  %></td>
-        <td><%= session.user_agent %></td>
+        <td><%= client(session.user_agent) %></td>
         <td><%= session.referrer %></td>
         <td><%= session.city %></td>
         <td><%= session.region %></td>
