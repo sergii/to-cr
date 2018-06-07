@@ -3,11 +3,7 @@ Rails.application.routes.draw do
 
   resources :tickets
 
-  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }, path_names: { sign_in: :login }
-  as :user do
-    get '/login', to: 'devise/sessions#new'
-  end
-
+  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 
   get '/sessions', to: 'pages#sessions'
   get '/browser', to: 'pages#browser'
