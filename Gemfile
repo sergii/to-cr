@@ -61,7 +61,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'omniauth-google-oauth2', '~> 0.5.3'
 gem 'rack-cors', '~> 1.0.2', require: 'rack/cors'
-gem 'authtrail'
+gem 'authtrail', git: 'git@github.com:sergii/authtrail.git'
 gem 'awesome_print'
 gem 'shog'
 
