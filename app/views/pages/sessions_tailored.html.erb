@@ -10,16 +10,15 @@
 <table>
   <thead>
     <tr>
-      <th>ID</th>
+      <th>Identity</th>
       <th>Scope</th>
       <th>Strategy</th>
-      <th>Identity</th>
       <th>Success</th>
       <th>Failure reason</th>
       <th>User type</th>
       <th>Context</th>
       <th>IP</th>
-      <th>User agent</th>
+      <th>Client</th>
       <th>Referrer</th>
       <th>City</th>
       <th>Region</th>
@@ -31,21 +30,20 @@
   <tbody>
     <% @sessions.each do |session| %>
       <tr>
-        <td><%= session.id %></td>
-        <td><%= session.scope %></td>
-        <td><%= session.strategy %></td>
         <td><%= session.identity %></td>
+        <td><%= session.scope %></td>
+        <td><%= strategy(session.strategy) %></td>
         <td><%= session.success %></td>
         <td><%= session.failure_reason %></td>
         <td><%= session.user_type %></td>
-        <td><%= session.context %></td>
+        <td><%= context(session.context) %></td>
         <td><%= session.ip  %></td>
-        <td><%= session.user_agent %></td>
+        <td><%= client(session.user_agent) %></td>
         <td><%= session.referrer %></td>
         <td><%= session.city %></td>
         <td><%= session.region %></td>
         <td><%= session.country %></td>
-        <td><%= time_ago_in_words(session.created_at) %> ago</td>
+        <td><%= time_ago_in_words(session.created_at) %> ago (TODO: Add time in TMZ)</td>
       </tr>
     <% end %>
   </tbody>

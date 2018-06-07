@@ -7,6 +7,10 @@ class PagesController < ApplicationController
     @sessions = LoginActivity.order_by_newest
   end
 
+  def sessions_tailored
+    @sessions = LoginActivity.order_by_newest
+  end
+
   def browser
     @browser = Browser.new(
       request.env['HTTP_USER_AGENT'],
