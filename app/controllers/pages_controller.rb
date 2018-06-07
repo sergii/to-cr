@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   Browser::Base.include(Browser::Aliases)
 
   def sessions
-    @sessions = LoginActivity.all
+    @sessions = LoginActivity.order_by_newest
   end
 
   def browser
