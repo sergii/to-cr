@@ -1,0 +1,29 @@
+<h1>Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>Current sign in|</th>
+      <th>Last sign in |</th>
+      <th>Sign in count |</th>
+      <th>Failed attempts |</th>
+      <th>Failed at |</th>
+      <th>Registered</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.email %></td>
+        <td><%= time_ago_in_words(user.current_sign_in_at) %></td>
+        <td><%= time_ago_in_words(user.last_sign_in_at) %></td>
+        <td><%= time_ago_in_words(user.sign_in_count) %></td>
+        <td><%= user.failed_attempts %></td>
+        <td><%= time_ago_in_words(user.locked_at) if user.locked_at %></td>
+        <td><%= time_ago_in_words(user.created_at) %> ago (TODO: Add time in TMZ)</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

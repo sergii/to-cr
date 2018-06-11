@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'users/index'
+
   root "home#index"
 
   resources :tickets
@@ -7,6 +9,7 @@ Rails.application.routes.draw do
 
   get '/sessions', to: 'pages#sessions'
   get '/sessions-tailored', to: 'pages#sessions_tailored'
+  get '/users', to: 'users#index'
 
   get '/browser', to: 'pages#browser'
   get '/device_detector', to: 'pages#device_detector'
