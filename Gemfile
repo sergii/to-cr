@@ -69,3 +69,5 @@ gem 'browser'
 gem 'device_detector'
 gem 'user_agent_parser'
 gem 'useragent'
+
+gem 'skylight'
