@@ -28,27 +28,27 @@ Minitest+Capybara, RSpec+Capybara, CodeceptJS framework.
 
 #### Minitest+Capybara
 
+That tests are place in `test` folder
+
 To run rails system tests with MiniTest and Capybara please type:
 
     rails test:system
-    
-That tests are place in `test` folder
 
 #### RSpec+Capybara
+
+That tests are place in `spec` folder
 
 To run rails system tests with RSpec and Capybara please type:
 
     rspec -cfd
-    
-That tests are place in `spec` folder
 
 #### CodeceptJS
     
+That tests are place in `codeceptjs` folder
+
 To run CodeceptJS tests wich based on node.js please type:
 
     codeceptjs run
-
-That tests are place in `codeceptjs` folder
 
 ### Services (job queues, cache servers, search engines, etc.)
 
