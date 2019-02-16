@@ -26,17 +26,29 @@ For writing Acceptence tests in this project we are using 3 different approaches
 
 Minitest+Capybara, RSpec+Capybara, CodeceptJS framework.
 
+#### Minitest+Capybara
+
 To run rails system tests with MiniTest and Capybara please type:
 
     rails test:system
+    
+That tests are place in `test` folder
+
+#### RSpec+Capybara
 
 To run rails system tests with RSpec and Capybara please type:
 
     rspec -cfd
     
+That tests are place in `spec` folder
+
+#### CodeceptJS
+    
 To run CodeceptJS tests wich based on node.js please type:
 
     codeceptjs run
+
+That tests are place in `codeceptjs` folder
 
 ### Services (job queues, cache servers, search engines, etc.)
 
